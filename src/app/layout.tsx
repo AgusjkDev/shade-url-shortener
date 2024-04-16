@@ -7,6 +7,8 @@ import Header from "./_components/header";
 
 import "@/styles/globals.css";
 
+import { cn } from "@/lib/utils";
+
 export const metadata: Metadata = {
     title: "Shade Url Shortener",
     description: "Description",
@@ -15,11 +17,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={GeistSans.variable}>
+            <body
+                className={cn(
+                    GeistSans.variable,
+                    "grid h-screen grid-rows-[auto_1fr] bg-background font-sans text-foreground antialiased",
+                )}
+            >
                 <Providers>
                     <Header />
 
-                    {children}
+                    <div className="overflow-y-auto">{children}</div>
                 </Providers>
             </body>
         </html>

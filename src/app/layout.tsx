@@ -3,6 +3,8 @@ import { GeistSans } from "geist/font/sans";
 
 import Providers from "@/components/providers";
 
+import Header from "./_components/header";
+
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +16,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={GeistSans.variable}>
-                <Providers>{children}</Providers>
+                <Providers>
+                    <Header />
+
+                    {children}
+                </Providers>
             </body>
         </html>
     );

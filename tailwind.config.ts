@@ -15,6 +15,16 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-geist-sans)"],
             },
+            fontSize: {
+                title: [
+                    "clamp(24px, 9vw, 58px)",
+                    {
+                        fontWeight: "900",
+                        lineHeight: "1",
+                        letterSpacing: "-0.025em",
+                    },
+                ],
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",

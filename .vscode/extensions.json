@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss",
+        "esbenp.prettier-vscode",
+        "pranaygp.vscode-css-peek",
+        "usernamehw.errorlens",
+        "yoavbls.pretty-ts-errors"
+    ]
+}

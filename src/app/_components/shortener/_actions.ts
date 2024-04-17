@@ -5,6 +5,7 @@ import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { generateRandomId } from "@/lib/utils";
 import { shortenFormSchema } from "@/data/schemas";
+import type { Tables } from "@/types/supabase";
 
 type ActionResponse<T> = { success: true; data: T } | { success: false; error: string };
 

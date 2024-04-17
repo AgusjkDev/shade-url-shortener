@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { shortenFormSchema } from "@/data/schemas";
+import type { Tables } from "@/types/supabase";
 
 import { createShortenUrl } from "./_actions";
 

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import type { User } from "@supabase/supabase-js";
 
+import type { Tables } from "@/types/supabase";
+
 import ShortenerForm from "./shortener-form";
 import ShortenerDialog from "./sortener-dialog";
 

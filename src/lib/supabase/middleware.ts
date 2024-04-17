@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
 import env from "@/data/env";
+import type { Database } from "@/types/supabase";
 
 export async function updateSession(request: NextRequest) {
     let response = NextResponse.next({

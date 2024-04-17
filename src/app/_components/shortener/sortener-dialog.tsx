@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
 import { useMounted } from "@/hooks/use-mounted";
+import type { Tables } from "@/types/supabase";
 
 interface ShortenerDialogProps extends Required<Pick<DialogProps, "open" | "onOpenChange">> {
     data: Tables<"urls"> | null;

@@ -59,7 +59,7 @@ export default function ShortenerDialog({ data, user, ...props }: Readonly<Short
                                 You can visit all your shortened urls&nbsp;
                                 <Link
                                     className="underline underline-offset-2 transition-colors hover:text-foreground"
-                                    href="/links"
+                                    href="/my-urls"
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >

@@ -46,8 +46,8 @@ export default async function AuthButton() {
 
                 <DropdownMenuSeparator />
 
-                <DropdownMenuItem asChild disabled>
-                    <Link href="/links">My links</Link>
+                <DropdownMenuItem asChild>
+                    <Link href="/my-urls">My urls</Link>
                 </DropdownMenuItem>
 
                 <form action={signOut}>

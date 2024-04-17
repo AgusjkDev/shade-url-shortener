@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import type { DialogProps } from "@radix-ui/react-dialog";
 import type { User } from "@supabase/supabase-js";
@@ -15,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import CopyToClipboard, { copyToClipboard } from "@/components/copy-to-clipboard";
-import { useMounted } from "@/hooks/use-mounted";
+import env from "@/data/env";
 import type { Tables } from "@/types/supabase";
 
 interface ShortenerDialogProps extends Required<Pick<DialogProps, "open" | "onOpenChange">> {
@@ -24,11 +22,7 @@ interface ShortenerDialogProps extends Required<Pick<DialogProps, "open" | "onOp
 }
 
 export default function ShortenerDialog({ data, user, ...props }: Readonly<ShortenerDialogProps>) {
-    const mounted = useMounted();
-
-    if (!mounted) return null;
-
-    const shortenedUrl = `${origin}/${data?.id}`;
+    const shortenedUrl = `${env.NEXT_PUBLIC_BASE_URL}/${data?.id}`;
 
     return (
         <Dialog {...props}>

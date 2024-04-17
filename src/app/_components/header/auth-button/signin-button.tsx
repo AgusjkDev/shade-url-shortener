@@ -5,6 +5,7 @@ import { Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/lib/supabase/client";
+import env from "@/data/env";
 
 export default function SignInButon() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -15,7 +16,7 @@ export default function SignInButon() {
 
         await supabase.auth.signInWithOAuth({
             provider: "google",
-            options: { redirectTo: `${origin}/auth/callback` },
+            options: { redirectTo: `${env.NEXT_PUBLIC_BASE_URL}/auth/callback` },
         });
     }
 

@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import type { DialogProps } from "@radix-ui/react-dialog";
-import { Link1Icon } from "@radix-ui/react-icons";
 import type { User } from "@supabase/supabase-js";
-import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { toast } from "@/components/ui/use-toast";
+import CopyToClipboard, { copyToClipboard } from "@/components/copy-to-clipboard";
 import { useMounted } from "@/hooks/use-mounted";
 import type { Tables } from "@/types/supabase";
 
@@ -27,21 +24,7 @@ interface ShortenerDialogProps extends Required<Pick<DialogProps, "open" | "onOp
 }
 
 export default function ShortenerDialog({ data, user, ...props }: Readonly<ShortenerDialogProps>) {
-    const [copied, setCopied] = useState<boolean>(false);
     const mounted = useMounted();
-
-    function copyToClipboard() {
-        try {
-            navigator.clipboard.writeText(shortenedUrl);
-            setCopied(true);
-            toast({ description: "Successfully copied to clipboard." });
-        } catch (_) {
-            toast({
-                description: "There was an unexpected error trying to copy the shortened url.",
-                variant: "destructive",
-            });
-        }
-    }
 
     if (!mounted) return null;
 
@@ -82,18 +65,10 @@ export default function ShortenerDialog({ data, user, ...props }: Readonly<Short
                                 <span>{shortenedUrl}</span>
                             </div>
 
-                            <Button
-                                className="absolute right-1.5 top-1/2 size-6 -translate-y-1/2"
-                                variant="outline"
-                                size="icon"
-                                onClick={copyToClipboard}
-                            >
-                                {copied ? (
-                                    <Check className="size-3.5" />
-                                ) : (
-                                    <Link1Icon className="size-3.5" />
-                                )}
-                            </Button>
+                            <CopyToClipboard
+                                className="absolute right-1.5 top-1/2 -translate-y-1/2"
+                                text={shortenedUrl}
+                            />
                         </div>
                     </div>
 
@@ -106,7 +81,7 @@ export default function ShortenerDialog({ data, user, ...props }: Readonly<Short
                     <Button
                         className="self-start"
                         onClick={() => {
-                            copyToClipboard();
+                            copyToClipboard(shortenedUrl);
                             props.onOpenChange(false);
                         }}
                     >

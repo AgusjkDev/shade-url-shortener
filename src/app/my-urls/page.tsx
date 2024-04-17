@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import CopyToClipboard from "@/components/copy-to-clipboard";
 import { createClient } from "@/lib/supabase/server";
 import { dateTimeAgo } from "@/lib/utils";
 import env from "@/data/env";
 
-import CopyToClipboard from "./_components/copy-to-clipboard";
 import FetchError from "./_components/fetch-error";
 
 export default async function MyUrls() {
@@ -43,7 +43,10 @@ export default async function MyUrls() {
                                 </Link>
                             </h3>
 
-                            <CopyToClipboard text={shortenedUrl} />
+                            <CopyToClipboard
+                                className="absolute right-0 top-1/2 -translate-y-1/2"
+                                text={shortenedUrl}
+                            />
                         </div>
 
                         <Link

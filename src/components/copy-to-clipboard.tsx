@@ -41,7 +41,7 @@ export default function CopyToClipboard({
             variant={variant}
             size={size}
             onClick={e => {
-                copyToClipboard("text", () => setCopied(true));
+                copyToClipboard(text, () => setCopied(true));
                 if (onClick) onClick(e);
             }}
             {...props}

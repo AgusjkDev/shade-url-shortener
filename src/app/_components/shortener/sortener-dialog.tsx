@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/use-toast";
 import { useMounted } from "@/hooks/use-mounted";
 
 interface ShortenerDialogProps extends Required<Pick<DialogProps, "open" | "onOpenChange">> {
@@ -28,10 +29,17 @@ export default function ShortenerDialog({ data, user, ...props }: Readonly<Short
     const [copied, setCopied] = useState<boolean>(false);
     const mounted = useMounted();
 
-    // TODO: Add toast
     function copyToClipboard() {
-        navigator.clipboard.writeText(shortenedUrl);
-        setCopied(true);
+        try {
+            navigator.clipboard.writeText(shortenedUrl);
+            setCopied(true);
+            toast({ description: "Successfully copied to clipboard." });
+        } catch (_) {
+            toast({
+                description: "There was an unexpected error trying to copy the shortened url.",
+                variant: "destructive",
+            });
+        }
     }
 
     if (!mounted) return null;

@@ -28,6 +28,8 @@ export async function createShortenUrl(
             .single();
 
         if (error) {
+            console.error(error);
+
             return { success: false, error: "An error occurred! Please try again..." };
         }
 

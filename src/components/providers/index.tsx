@@ -1,3 +1,5 @@
+import { Toaster } from "@/components/ui/toaster";
+
 import ThemeProvider from "./theme-provider";
 
 interface ProvidersProps {
@@ -13,6 +15,8 @@ export default function Providers({ children }: Readonly<ProvidersProps>) {
             defaultTheme="system"
         >
             {children}
+
+            <Toaster />
         </ThemeProvider>
     );
 }

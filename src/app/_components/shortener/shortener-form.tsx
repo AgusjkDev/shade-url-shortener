@@ -16,6 +16,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 import { shortenFormSchema } from "@/data/schemas";
 
 import { createShortenUrl } from "./_actions";
@@ -33,7 +34,6 @@ export default function ShortenerForm({ onSuccess }: Readonly<ShortenerFormProps
         },
     });
 
-    // TODO: Add toasts
     async function onSubmit(values: z.infer<typeof shortenFormSchema>) {
         setIsLoading(true);
 
@@ -41,7 +41,7 @@ export default function ShortenerForm({ onSuccess }: Readonly<ShortenerFormProps
         if (response.success) {
             onSuccess(response.data);
         } else {
-            alert(response.error);
+            toast({ description: response.error });
         }
 
         form.reset();

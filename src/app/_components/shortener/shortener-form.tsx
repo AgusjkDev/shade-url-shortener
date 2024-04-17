@@ -42,7 +42,7 @@ export default function ShortenerForm({ onSuccess }: Readonly<ShortenerFormProps
         if (response.success) {
             onSuccess(response.data);
         } else {
-            toast({ description: response.error });
+            toast({ description: response.error, variant: "destructive" });
         }
 
         form.reset();

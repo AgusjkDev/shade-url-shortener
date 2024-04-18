@@ -48,7 +48,7 @@ export default async function MyUrls({
                             <div className="relative py-1 pr-9">
                                 <h3 className="break-words text-sm font-semibold">
                                     <Link
-                                        className="underline-offset-2 hover:underline"
+                                        className="rounded-sm underline-offset-2 hover:underline focus-visible:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                                         href={shortenedUrl}
                                         rel="noopener noreferrer"
                                         target="_blank"
@@ -64,7 +64,7 @@ export default async function MyUrls({
                             </div>
 
                             <Link
-                                className="self-start break-words text-xs text-muted-foreground underline-offset-2 hover:underline"
+                                className="self-start break-words rounded-sm text-xs text-muted-foreground underline-offset-2 hover:underline focus-visible:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                                 href={url}
                                 rel="noopener noreferrer"
                                 target="_blank"

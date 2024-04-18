@@ -36,7 +36,7 @@ export default async function AuthButton() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button aria-label="Open user menu" variant="outline" size="icon">
                     <PersonIcon className="size-4" />
                 </Button>
             </DropdownMenuTrigger>

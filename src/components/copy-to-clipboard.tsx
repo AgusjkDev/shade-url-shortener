@@ -37,6 +37,7 @@ export default function CopyToClipboard({
 
     return (
         <Button
+            aria-label="Copy shortened url"
             className={cn("size-6", className)}
             variant={variant}
             size={size}

@@ -24,7 +24,7 @@ export default function SignInButon() {
         <Button className="w-40" disabled={isLoading} variant="outline" onClick={handleSignIn}>
             {isLoading ? (
                 <>
-                    <Loader2 className="mr-2 size-4 animate-spin" />
+                    <Loader2 aria-label="Loading spinner" className="mr-2 size-4 animate-spin" />
 
                     <span>Please wait</span>
                 </>

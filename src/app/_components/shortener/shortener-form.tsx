@@ -80,7 +80,10 @@ export default function ShortenerForm({ onSuccess }: Readonly<ShortenerFormProps
                 <Button disabled={isLoading} type="submit" className="w-36 self-start">
                     {isLoading ? (
                         <>
-                            <Loader2 className="mr-2 size-4 animate-spin" />
+                            <Loader2
+                                aria-label="Loading spinner"
+                                className="mr-2 size-4 animate-spin"
+                            />
 
                             <span>Please wait</span>
                         </>

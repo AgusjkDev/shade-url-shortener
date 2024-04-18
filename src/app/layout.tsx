@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 
 import Providers from "@/components/providers";
+import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/config";
 import env from "@/data/env";
 
 import Header from "./_components/header";
 
 import "@/styles/globals.css";
-
-import { cn } from "@/lib/utils";
 
 export function generateMetadata(): Metadata {
     return {

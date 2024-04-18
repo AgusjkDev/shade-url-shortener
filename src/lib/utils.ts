@@ -6,7 +6,15 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function generateRandomId() {
-    return Math.random().toString(36).slice(2, 9);
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const charsLength = chars.length;
+
+    let id = "";
+    for (let i = 0; i < 7; i++) {
+        id += chars.charAt(Math.floor(Math.random() * charsLength));
+    }
+
+    return id;
 }
 
 export function dateTimeAgo(date: Date) {

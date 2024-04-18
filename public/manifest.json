@@ -1,0 +1,26 @@
+{
+    "name": "Shade Url Shortener",
+    "short_name": "Shade Url Shortener",
+    "description": "Shade Url Shortener: Transform your URLs into refined, compact forms with just a click.",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        { "type": "image/png", "sizes": "16x16", "src": "/imgs/favicons/favicon-16x16.png" },
+        { "type": "image/png", "sizes": "32x32", "src": "/imgs/favicons/favicon-32x32.png" },
+        { "type": "image/png", "sizes": "36x36", "src": "/imgs/favicons/favicon-36x36.png" },
+        { "type": "image/png", "sizes": "48x48", "src": "/imgs/favicons/favicon-48x48.png" },
+        { "type": "image/png", "sizes": "57x57", "src": "/imgs/favicons/favicon-57x57.png" },
+        { "type": "image/png", "sizes": "60x60", "src": "/imgs/favicons/favicon-60x60.png" },
+        { "type": "image/png", "sizes": "72x72", "src": "/imgs/favicons/favicon-72x72.png" },
+        { "type": "image/png", "sizes": "76x76", "src": "/imgs/favicons/favicon-76x76.png" },
+        { "type": "image/png", "sizes": "96x96", "src": "/imgs/favicons/favicon-96x96.png" },
+        { "type": "image/png", "sizes": "114x114", "src": "/imgs/favicons/favicon-114x114.png" },
+        { "type": "image/png", "sizes": "120x120", "src": "/imgs/favicons/favicon-120x120.png" },
+        { "type": "image/png", "sizes": "144x144", "src": "/imgs/favicons/favicon-144x144.png" },
+        { "type": "image/png", "sizes": "152x152", "src": "/imgs/favicons/favicon-152x152.png" },
+        { "type": "image/png", "sizes": "180x180", "src": "/imgs/favicons/favicon-180x180.png" },
+        { "type": "image/png", "sizes": "192x192", "src": "/imgs/favicons/favicon-192x192.png" },
+        { "type": "image/png", "sizes": "512x512", "src": "/imgs/favicons/favicon-512x512.png" }
+    ]
+}

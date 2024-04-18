@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <Providers>
                     <Header />
 
-                    <div className="overflow-y-auto">{children}</div>
+                    <div className="overflow-y-auto scroll-smooth">{children}</div>
                 </Providers>
             </body>
         </html>

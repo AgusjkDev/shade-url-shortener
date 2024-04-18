@@ -64,7 +64,7 @@ export default async function MyUrls({
                             </div>
 
                             <Link
-                                className="break-words text-xs text-muted-foreground underline-offset-2 hover:underline"
+                                className="self-start break-words text-xs text-muted-foreground underline-offset-2 hover:underline"
                                 href={url}
                                 rel="noopener noreferrer"
                                 target="_blank"

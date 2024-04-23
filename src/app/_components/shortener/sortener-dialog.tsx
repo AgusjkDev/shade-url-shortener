@@ -55,9 +55,11 @@ export default function ShortenerDialog({ data, user, ...props }: Readonly<Short
                         <Label>Shortened url</Label>
 
                         <div className="relative">
-                            <div className="flex h-9 items-center rounded-md border px-3 py-1 text-sm">
-                                <span>{shortenedUrl}</span>
-                            </div>
+                            <Input
+                                disabled
+                                className="disabled:cursor-default disabled:opacity-100"
+                                defaultValue={shortenedUrl}
+                            />
 
                             <CopyToClipboard
                                 className="absolute right-1.5 top-1/2 -translate-y-1/2"

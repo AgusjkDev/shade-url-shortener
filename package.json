@@ -2,6 +2,21 @@
     "name": "shade-url-shortener",
     "version": "0.1.0",
     "private": true,
+    "description": "Refined and easy to use URL shortener.",
+    "keywords": [
+        "url",
+        "shortener",
+        "easy",
+        "fast"
+    ],
+    "author": {
+        "name": "Agustín Arnoldi",
+        "email": "agusjkdev7@gmail.com",
+        "url": "https://github.com/agusjkdev"
+    },
+    "repository": {
+        "url": "git+https://github.com/agusjkdev/shade-url-shortener.git"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
